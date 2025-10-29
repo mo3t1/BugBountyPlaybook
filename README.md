@@ -21,7 +21,7 @@
       amass enum -passive -d target.com -o subs.txt
 
    # wayback + urls:
-      cat subfinder.txt amass_passive.txt | sort -u > domains.txt
+      cat subs.txt | sort -u > domains.txt
       for d in $(cat domains.txt); do
         echo "=== $d ==="
         waybackurls $d | anew wayback_urls.txt
